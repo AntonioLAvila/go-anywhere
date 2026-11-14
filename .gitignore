@@ -6,3 +6,6 @@ logs
 wandb
 *.mp4
 MUJOCO_LOG.TXT
+configs/experts.yaml
+.pytest_cache
+*.onnx

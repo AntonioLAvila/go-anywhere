@@ -1,0 +1,10 @@
+# Expert manifest consumed by TeacherEnsemble (distillation / finetune critic routing).
+# Generate from log dirs with: bin/uv-run python scripts/make_experts_manifest.py
+experts:
+  flat:
+    checkpoint: logs/rsl_rl/go2_expert_flat/<run>/model_5000.pt
+    # agent_cfg: defaults to <run>/params/agent.yaml next to the checkpoint
+    skills: [flat, drops]   # skills this expert answers for until a drops expert exists
+  rough:
+    checkpoint: logs/rsl_rl/go2_expert_rough/<run>/model_5000.pt
+    skills: [rough]
